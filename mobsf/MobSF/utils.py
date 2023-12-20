@@ -157,6 +157,7 @@ def find_java_binary():
         jbin = 'java.exe'
     else:
         jbin = 'java'
+    jbin + " -Xmx1g -XX:MaxMetaspaceSize=1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
     if is_dir_exists(settings.JAVA_DIRECTORY):
         if settings.JAVA_DIRECTORY.endswith('/'):
             return settings.JAVA_DIRECTORY + jbin
