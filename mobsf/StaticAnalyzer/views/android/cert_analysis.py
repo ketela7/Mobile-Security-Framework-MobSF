@@ -130,7 +130,7 @@ def get_signature_versions(app_path, tools_dir, signed):
             return v1, v2, v3, v4
         logger.info('Getting Signature Versions')
         apksigner = Path(tools_dir) / 'apksigner.jar'
-        args = [find_java_binary(), '-Xmx1024M',
+        args = [find_java_binary(), #'-Xmx1024M',
                 '-Djava.library.path=', '-jar',
                 apksigner.as_posix(),
                 'verify', '--verbose', app_path]
