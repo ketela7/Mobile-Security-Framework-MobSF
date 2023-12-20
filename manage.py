@@ -13,7 +13,7 @@ def memory_limit():
     
     # Convert KiB to bytes, and divide in two to half
     #po = int(get_memory() * 1024 / 2)
-    resource.setrlimit(resource.RLIMIT_AS, (1503238553, hard))
+    resource.setrlimit(resource.RLIMIT_AS, (2147483648, hard))
 
 memory_limit()
 
